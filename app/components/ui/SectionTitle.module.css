@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #293771;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #CCCCCC;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}

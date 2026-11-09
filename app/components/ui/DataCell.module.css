@@ -1,0 +1,53 @@
+/* Convention couleurs aéronautique / charte DH */
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #CCCCCC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.value {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.unit {
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.65;
+}
+
+/* Normal — fond seasalt, texte sombre */
+.normal   { background: #EFEFEF; color: #121212; border: 1px solid #E6E6E6; }
+
+/* Altéré — Moonstone, données modifiées ou en attente */
+.altered  { background: #3EAABC; color: #121212; }
+
+/* Erreur — Bittersweet, valeur en erreur */
+.error    { background: #C44C4C; color: #F7F7F7; }
+
+/* Highlight — Xanthous, attention / prochain événement */
+.highlight { background: #F7BA38; color: #121212; }
+
+/* Exergue — Mint, valeur bonne à souligner */
+.exergue  { background: #55B187; color: #F7F7F7; }
+
+/* Invalide — donnée absente (//////) */
+.invalid  { background: #CCCCCC; color: #3F3F3F; font-style: italic; }

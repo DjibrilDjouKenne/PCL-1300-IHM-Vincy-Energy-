@@ -1,0 +1,96 @@
+.panel {
+  width: 170px;
+  flex-shrink: 0;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-bottom: 1px solid #E6E6E6;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: #293771;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnNew {
+  font-size: 9px; font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3EAABC;
+  background: none;
+  border: 1px solid #3EAABC;
+  border-radius: 4px;
+  padding: 2px 7px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.15s, color 0.15s;
+}
+.btnNew:hover { background: #3EAABC; color: #F7F7F7; }
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  background: none;
+  border: 1px solid transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  transition: background 0.12s, border-color 0.12s;
+}
+.item:hover    { background: #EFEFEF; border-color: #E6E6E6; }
+.itemActive    { background: #e3f5f8; border-color: #3EAABC; }
+
+/* Ligne nom + badge cycle */
+.itemTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.itemName  { font-size: 11px; font-weight: 700; color: #293771; }
+.itemSub   { font-size: 9px; color: #CCCCCC; }
+
+/* Badge "présente dans le cycle" */
+.cycleTag {
+  font-size: 8px;
+  font-weight: 700;
+  background: #3EAABC;
+  color: #F7F7F7;
+  border-radius: 3px;
+  padding: 1px 4px;
+  flex-shrink: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.empty {
+  font-size: 10px; color: #CCCCCC;
+  font-style: italic; text-align: center;
+  padding: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}

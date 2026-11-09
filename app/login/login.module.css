@@ -1,0 +1,437 @@
+/* ============================
+   LOGIN PAGE — CHARTE DH
+   ============================ */
+
+/* Variables DH (charte graphique) */
+:root {
+  --dh-dark-blue: #293771;
+  --dh-dark-blue-alt: #364996;
+  --dh-light-blue: #3EAABC;
+  --dh-yellow: #F7BA38;
+  --dh-green: #55B187;
+  --dh-red: #C44C4C;
+
+  --dh-white: #F7F7F7;
+  --dh-light-bg: #EFEFEF;
+  --dh-light-shadow: #E6E6E6;
+  --dh-dark-shadow: #CCCCCC;
+
+  --dh-more-dark: #121212;
+  --dh-dark: #282828;
+  --dh-less-dark: #3F3F3F;
+}
+
+/* Layout principal */
+.page {
+  display: flex;
+  min-height: 100vh;
+  background: var(--dh-light-bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ====== PANNEAU GAUCHE ====== */
+
+.leftPanel {
+  width: 40%;
+  min-width: 280px;
+  background-color: var(--dh-dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  position: relative;
+}
+
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fallback logo si SVG non disponible */
+.logoFallback {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoLetters {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--dh-white);
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logoDegreane {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dh-light-blue);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.logoHorizon {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dh-white);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--dh-light-blue);
+  border-radius: 1px;
+}
+
+.tagline {
+  font-size: 11px;
+  color: var(--dh-light-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.vinciBlock {
+  position: absolute;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.vinciLabel {
+  font-size: 10px;
+  color: var(--dh-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.4;
+}
+
+.vinciName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dh-white);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0.35;
+}
+
+/* ====== PANNEAU DROIT ====== */
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  position: relative;
+}
+
+/* ====== CARTE CONNEXION ====== */
+
+.loginCard {
+  background: var(--dh-white);
+  border: 1px solid var(--dh-light-shadow);
+  border-radius: 8px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.cardHeader {
+  margin-bottom: 28px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dh-dark-blue);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 0 6px 0;
+  text-align: center;
+}
+
+.cardSub {
+  font-size: 11px;
+  color: var(--dh-dark-shadow);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  text-align: center;
+}
+
+/* ====== MESSAGE D'ERREUR ====== */
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff0f0;
+  border: 1px solid var(--dh-red);
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dh-red);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* ====== FORMULAIRE ====== */
+
+.formGroup {
+  margin-bottom: 18px;
+}
+
+.label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--dh-dark-blue);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 7px;
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  color: var(--dh-dark-shadow);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0 38px 0 34px;
+  border: 1px solid var(--dh-dark-shadow);
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  background: #ffffff;
+  color: var(--dh-dark);
+  text-transform: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--dh-dark-shadow);
+  font-size: 12px;
+}
+
+.input:hover {
+  border-color: var(--dh-light-blue);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--dh-light-blue);
+  box-shadow: 0 0 0 3px rgba(62, 170, 188, 0.15);
+}
+
+/* Bouton afficher/masquer mot de passe */
+.eyeBtn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dh-dark-shadow);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.eyeBtn:hover {
+  color: var(--dh-dark-blue);
+}
+
+/* ====== BOUTON SUBMIT ====== */
+
+.btnSubmit {
+  width: 100%;
+  height: 42px;
+  background: var(--dh-dark-blue);
+  color: var(--dh-white);
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btnSubmit:hover:not(:disabled) {
+  background: var(--dh-dark-blue-alt);
+}
+
+.btnSubmit:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btnSubmit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.btnLoading {
+  background: var(--dh-dark-blue-alt);
+}
+
+/* Spinner chargement */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(247, 247, 247, 0.3);
+  border-top-color: var(--dh-white);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ====== PIED DE CARTE ====== */
+
+.cardFooter {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.forgotLink {
+  font-size: 11px;
+  color: var(--dh-light-blue);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.forgotLink:hover {
+  color: var(--dh-dark-blue);
+  text-decoration: underline;
+}
+
+/* ====== TAG VERSION ====== */
+
+.versionTag {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  font-size: 10px;
+  color: var(--dh-dark-shadow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ====== RESPONSIVE ====== */
+
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .leftPanel {
+    width: 100%;
+    min-height: 180px;
+    padding: 32px 24px;
+  }
+
+  .vinciBlock {
+    display: none;
+  }
+
+  .rightPanel {
+    padding: 32px 16px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .loginCard {
+    padding: 28px 20px;
+  }
+
+  .versionTag {
+    position: static;
+    text-align: center;
+    margin-top: 16px;
+  }
+}
+
+/* ====== THEME SOMBRE (optionnel) ====== */
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    background: var(--dh-more-dark);
+  }
+
+  .loginCard {
+    background: var(--dh-less-dark);
+    border-color: #4a4a4a;
+  }
+
+  .cardTitle {
+    color: var(--dh-white);
+  }
+
+  .cardSub {
+    color: #888;
+  }
+
+  .label {
+    color: var(--dh-light-blue);
+  }
+
+  .input {
+    background: var(--dh-dark);
+    border-color: #4a4a4a;
+    color: var(--dh-white);
+  }
+
+  .input:hover,
+  .input:focus {
+    border-color: var(--dh-light-blue);
+  }
+}

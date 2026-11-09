@@ -1,0 +1,49 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  white-space: nowrap;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.fullWidth {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Variantes — charte DH */
+.primary   { background: #293771; color: #F7F7F7; }
+.danger    { background: #C44C4C; color: #F7F7F7; }
+.success   { background: #55B187; color: #F7F7F7; }
+.secondary { background: #E6E6E6; color: #293771; border: 1px solid #CCCCCC; box-shadow: none; }
+.ghost     { background: transparent; color: #3EAABC; box-shadow: none; padding-left: 0; }

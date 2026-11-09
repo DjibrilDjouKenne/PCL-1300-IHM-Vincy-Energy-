@@ -1,0 +1,166 @@
+/* ============================================================
+   ProfilVentViewer — styles
+   Le composant est placé dans .viewerBody qui est un flex container
+   (flex-direction: column). On utilise flex: 1 + min-height: 0
+   au lieu de height: 100% pour que ça marche dans un contexte flex.
+   ============================================================ */
+
+/* Conteneur racine — flex item dans viewerBody */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── Toolbar modes ── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;          /* ne se compresse pas */
+  padding: 6px 10px;
+  background: #F0F0F0;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.modeGroup { display: flex; gap: 3px; }
+
+.modeBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border: 1.5px solid #E6E6E6;
+  border-radius: 4px;
+  background: #F7F7F7;
+  color: #CCCCCC;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: all 0.12s;
+  white-space: nowrap;
+}
+.modeBtn:hover { border-color: #CCCCCC; color: #3F3F3F; }
+
+.modeBtnActive {
+  border-color: #293771;
+  color: #293771;
+  background: #e8eaf6;
+}
+
+.modeBtnActiveSelection {
+  border-color: #F7BA38;
+  color: #c9920a;
+  background: #fff8e3;
+}
+
+.toolbarSep {
+  width: 1px;
+  height: 18px;
+  background: #E6E6E6;
+  flex-shrink: 0;
+}
+
+.toolbarHint {
+  font-size: 10px;
+  color: #CCCCCC;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Zone graphe — prend tout l'espace restant ── */
+.graphArea {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── SVG wrapper — positionné relativement pour les boutons zoom ── */
+.graphWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.svg { display: block; background: #F7F7F7; }
+
+/* ── Boutons zoom ── */
+.zoomControls {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 10;
+}
+
+.zoomBtn {
+  width: 26px; height: 26px;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  color: #293771;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.12s, border-color 0.12s;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(41,55,113,.08);
+}
+.zoomBtn:hover:not(:disabled) { background: #e3f5f8; border-color: #3EAABC; color: #3EAABC; }
+.zoomBtn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.zoomBtnReset {
+  width: 26px; height: 26px;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  color: #CCCCCC; font-size: 13px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 4px;
+  box-shadow: 0 1px 3px rgba(41,55,113,.08);
+  transition: background 0.12s, color 0.12s;
+}
+.zoomBtnReset:hover { background: #EFEFEF; color: #293771; }
+
+/* ── Brush D3 — rectangle de sélection jaune ── */
+.graphWrapper :global(.brush-group .selection) {
+  fill: #F7BA38;
+  fill-opacity: 0.15;
+  stroke: #F7BA38;
+  stroke-width: 1.5;
+  stroke-dasharray: 4, 3;
+}
+.graphWrapper :global(.brush-group .handle) {
+  fill: #F7BA38;
+  opacity: 0.6;
+}
+.graphWrapper :global(.brush-group .overlay) {
+  cursor: crosshair;
+}
+
+/* ── Footer légende ── */
+.footer {
+  font-size: 16px;
+  color: #293771;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-shrink: 0;
+  padding-top: 6px;
+  border-top: 1px solid #E6E6E6;
+}

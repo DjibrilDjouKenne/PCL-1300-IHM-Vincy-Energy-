@@ -1,0 +1,141 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.introTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #293771;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.stateBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+}
+
+.stateError { background: #faeaea; border-color: #C44C4C; }
+.stateOk    { background: #f0fbf5; border-color: #55B187; }
+
+.stateIcon  { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.spinner    { font-size: 20px; flex-shrink: 0; animation: spin 1.2s linear infinite; }
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.stateContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.stateTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #293771;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.stateMsg {
+  font-size: 11px;
+  color: #3F3F3F;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+.stateError .stateMsg { color: #C44C4C; }
+
+.missingList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.missingTitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: #C44C4C;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.missingItem {
+  font-size: 10px;
+  font-weight: 700;
+  color: #C44C4C;
+  background: #fdd;
+  border: 1px solid #C44C4C;
+  border-radius: 3px;
+  padding: 1px 7px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Résumé */
+.summarySection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.summaryLabel {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #CCCCCC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.chip {
+  font-size: 10px;
+  font-weight: 700;
+  color: #293771;
+  background: #EFEFEF;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  padding: 2px 7px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chipReq { background: #e3f5f8; border-color: #3EAABC; color: #1a7a8a; }
+.chipOpt { background: #e4f5ed; border-color: #55B187; color: #2a6b4c; }
+
+.metaList { display: flex; flex-direction: column; gap: 3px; }
+
+.metaRow {
+  display: flex;
+  gap: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+.metaKey {
+  font-weight: 700;
+  color: #293771;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.metaVal {
+  color: #3F3F3F;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,19 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ok    { background: #e4f5ed; color: #2a6b4c; }
+.err   { background: #faeaea; color: #C44C4C; }
+.warn  { background: #fef7e6; color: #8a6000; }
+.live  { background: #e3f5f8; color: #1a7a8a; }
+.maint { background: #eef0f8; color: #293771; }
+.info  { background: #f0f0f0; color: #444444; }

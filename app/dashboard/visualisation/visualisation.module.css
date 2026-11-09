@@ -1,0 +1,214 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* ── En-tête ── */
+.pageHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.pageTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #293771;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.pageSub {
+  font-size: 11px;
+  color: #CCCCCC;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resetBtn {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 700;
+  color: #3EAABC;
+  background: none;
+  border: 1px solid #3EAABC;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.12s, color 0.12s;
+}
+.resetBtn:hover { background: #3EAABC; color: #F7F7F7; }
+
+/* ── Stepper ── */
+.stepper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.stepperItem {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.stepperItem:last-child { flex: 0; }
+
+.stepBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.stepBtn:not(:disabled) { cursor: pointer; }
+
+.stepNum {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #E6E6E6;
+  background: #F7F7F7;
+  color: #CCCCCC;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.stepLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #CCCCCC;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.stepActive .stepNum  { border-color: #293771; background: #293771; color: #F7F7F7; }
+.stepActive .stepLabel { color: #293771; }
+
+.stepDone .stepNum   { border-color: #55B187; background: #55B187; color: #F7F7F7; }
+.stepDone .stepLabel  { color: #55B187; }
+
+.stepConnector {
+  flex: 1;
+  height: 2px;
+  background: #E6E6E6;
+  margin: 0 8px;
+  transition: background 0.2s;
+}
+.connectorDone { background: #55B187; }
+
+/* ── Contenu ── */
+.content {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Validation */
+.validationWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.retryBtn {
+  font-size: 10px;
+  font-weight: 700;
+  color: #C44C4C;
+  background: none;
+  border: 1px solid #C44C4C;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  align-self: flex-start;
+  transition: background 0.12s, color 0.12s;
+}
+.retryBtn:hover { background: #C44C4C; color: #F7F7F7; }
+
+/* Viewer */
+.viewerWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.viewerHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 8px 12px;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  flex-wrap: wrap;
+}
+
+.viewerTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #293771;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.viewerFile {
+  font-size: 10px;
+  color: #CCCCCC;
+  font-family: Arial, Helvetica, sans-serif;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.changeFileBtn {
+  font-size: 9px;
+  font-weight: 700;
+  color: #3EAABC;
+  background: none;
+  border: 1px solid #3EAABC;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.12s, color 0.12s;
+  white-space: nowrap;
+}
+.changeFileBtn:hover { background: #3EAABC; color: #F7F7F7; }
+
+.viewerBody {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}

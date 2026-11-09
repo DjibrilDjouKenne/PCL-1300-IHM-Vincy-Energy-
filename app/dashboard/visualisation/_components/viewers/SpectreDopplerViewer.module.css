@@ -1,0 +1,26 @@
+.wrapper     { display:flex;flex-direction:column;gap:8px;height:100%;overflow:hidden;font-family:Arial,Helvetica,sans-serif }
+.toggleRow   { display:flex;gap:6px;flex-wrap:wrap;align-items:center;flex-shrink:0 }
+.graphRow    { display:flex;gap:0;flex:1;min-height:0;overflow:hidden }
+.graphLeft   { flex:3;min-width:0;overflow:hidden }
+.graphRight  { flex:1;min-width:0;overflow:hidden }
+.graphWrapper{ position:relative;width:100%;height:100% }
+.svg         { display:block;background:#F7F7F7 }
+.toggleBtn   { display:flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;border:1.5px solid #E6E6E6;background:#F7F7F7;color:#CCCCCC;font-size:10px;font-weight:700;font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;transition:all .15s }
+.toggleBtn:hover{ border-color:#CCCCCC;color:#3F3F3F }
+.toggleOn    { background:#F7F7F7;font-weight:700 }
+.toggleDot   { width:8px;height:8px;border-radius:50%;flex-shrink:0;transition:background .15s }
+.toggleSep   { width:1px;height:18px;background:#E6E6E6;flex-shrink:0;margin:0 2px }
+.zoomControls{ position:absolute;top:6px;right:6px;display:flex;flex-direction:column;gap:3px;z-index:10 }
+.zoomBtn     { width:26px;height:26px;background:#F7F7F7;border:1px solid #E6E6E6;border-radius:5px;color:#293771;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:Arial;transition:background .12s,border-color .12s;line-height:1;box-shadow:0 1px 3px rgba(41,55,113,.08) }
+.zoomBtn:hover{ background:#e3f5f8;border-color:#3EAABC;color:#3EAABC }
+.zoomBtnReset{ width:26px;height:26px;background:#F7F7F7;border:1px solid #E6E6E6;border-radius:5px;color:#CCCCCC;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-top:4px;box-shadow:0 1px 3px rgba(41,55,113,.08);transition:background .12s,color .12s }
+.zoomBtnReset:hover{ background:#EFEFEF;color:#293771 }
+.tooltip     { position:absolute;background:rgba(41,55,113,.92);border-radius:5px;padding:7px 10px;pointer-events:none;z-index:100;min-width:170px }
+.tooltipLine { font-size:10px;font-weight:700;color:#F7F7F7;font-family:'Courier New',monospace;line-height:1.7;white-space:nowrap }
+.legendsRow  { display:flex;gap:20px;flex-shrink:0;padding-top:8px;border-top:1px solid #E6E6E6;flex-wrap:wrap;align-items:flex-start }
+.legendBlock { display:flex;flex-direction:column;gap:5px }
+.legendBlockTitle{ font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#CCCCCC;font-family:Arial,Helvetica,sans-serif }
+.legendColormapRow{ display:flex;align-items:center;gap:6px }
+.legendContoursRow{ display:flex;align-items:center;gap:12px }
+.legendContourItem{ display:flex;align-items:center;gap:4px }
+.legendVal   { font-size:9px;font-weight:700;color:#3F3F3F;font-family:Arial,Helvetica,sans-serif }

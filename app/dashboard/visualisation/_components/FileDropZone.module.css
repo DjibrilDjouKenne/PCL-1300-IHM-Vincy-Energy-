@@ -1,0 +1,131 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 540px;
+}
+
+.intro { display: flex; flex-direction: column; gap: 3px; }
+
+.introTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #293771;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.introSub {
+  font-size: 10px;
+  color: #CCCCCC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropZone {
+  border: 2px dashed #E6E6E6;
+  border-radius: 8px;
+  padding: 28px 20px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F7F7F7;
+  min-height: 100px;
+}
+.dropZone:hover   { border-color: #3EAABC; background: #f0fafb; }
+.dragging         { border-color: #3EAABC; background: #e3f5f8; border-style: solid; }
+.picked           { border-color: #55B187; border-style: solid; background: #f0fbf5; }
+
+.hiddenInput { display: none; }
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.placeholderIcon {
+  font-size: 28px;
+  color: #CCCCCC;
+}
+
+.placeholderText {
+  font-size: 12px;
+  color: #3F3F3F;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.browse {
+  color: #3EAABC;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.placeholderSub {
+  font-size: 10px;
+  color: #CCCCCC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fichier sélectionné */
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.fileIcon { font-size: 24px; flex-shrink: 0; }
+
+.fileMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.fileName {
+  font-size: 12px;
+  font-weight: 700;
+  color: #293771;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileSize {
+  font-size: 10px;
+  color: #CCCCCC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.changeBtn {
+  font-size: 10px;
+  font-weight: 700;
+  color: #3EAABC;
+  background: none;
+  border: 1px solid #3EAABC;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+.changeBtn:hover { background: #3EAABC; color: #F7F7F7; }
+
+.errorBanner {
+  font-size: 11px;
+  color: #C44C4C;
+  background: #faeaea;
+  border: 1px solid #C44C4C;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}

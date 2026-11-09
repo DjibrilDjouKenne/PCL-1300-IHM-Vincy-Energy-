@@ -1,0 +1,16 @@
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #F7F7F7;
+  border: 1px dashed #CCCCCC;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.icon  { font-size: 40px; }
+.title { font-size: 14px; font-weight: 700; color: #293771; font-family: Arial, Helvetica, sans-serif; }
+.msg   { font-size: 11px; color: #CCCCCC; font-style: italic; font-family: Arial, Helvetica, sans-serif; text-align: center; }

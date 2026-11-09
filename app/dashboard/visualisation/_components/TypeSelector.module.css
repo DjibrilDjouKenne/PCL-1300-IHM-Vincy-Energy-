@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.intro { display: flex; flex-direction: column; gap: 4px; }
+
+.introTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #293771;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.introSub {
+  font-size: 11px;
+  color: #CCCCCC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 14px 10px;
+  background: #F7F7F7;
+  border: 1.5px solid #E6E6E6;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+.card:hover:not(:disabled) {
+  border-color: #3EAABC;
+  background: #f0fafb;
+  box-shadow: 0 2px 10px rgba(62,170,188,0.12);
+}
+
+.cardSelected {
+  border-color: #3EAABC !important;
+  background: #e3f5f8 !important;
+  box-shadow: 0 2px 12px rgba(62,170,188,0.18) !important;
+}
+
+.cardSoon {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cardIcon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.cardLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #293771;
+}
+
+.cardDesc {
+  font-size: 10px;
+  color: #3F3F3F;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.badgeExt {
+  font-size: 9px;
+  font-weight: 700;
+  color: #CCCCCC;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badgeSoon {
+  font-size: 9px;
+  font-weight: 700;
+  color: #F7BA38;
+  background: #fff8e3;
+  border: 1px solid #F7BA38;
+  border-radius: 3px;
+  padding: 1px 6px;
+  text-transform: uppercase;
+}
+
+.badgeOk {
+  font-size: 9px;
+  font-weight: 700;
+  color: #3EAABC;
+  background: #e3f5f8;
+  border-radius: 3px;
+  padding: 1px 6px;
+}

@@ -1,0 +1,81 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(41, 55, 113, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+
+.dialog {
+  background: #F7F7F7;
+  border-radius: 8px;
+  padding: 20px 24px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 32px rgba(41, 55, 113, 0.2);
+  border-top: 4px solid transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.warn   { border-top-color: #F7BA38; }
+.danger { border-top-color: #C44C4C; }
+.info   { border-top-color: #3EAABC; }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #293771;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.message {
+  font-size: 12px;
+  color: #3F3F3F;
+  line-height: 1.6;
+}
+
+.message strong { color: #293771; }
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 4px;
+  border-top: 1px solid #E6E6E6;
+}
+
+.btn {
+  padding: 7px 16px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s;
+}
+.btn:hover { opacity: 0.85; }
+
+.btn_primary   { background: #293771; color: #F7F7F7; }
+.btn_danger    { background: #C44C4C; color: #F7F7F7; }
+.btn_secondary { background: #EFEFEF; color: #293771; border: 1px solid #E6E6E6; }

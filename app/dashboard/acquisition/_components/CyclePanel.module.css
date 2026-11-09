@@ -1,0 +1,323 @@
+.panel {
+  width: 210px;
+  flex-shrink: 0;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* ── Titres de section ── */
+.sectionTitle {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #CCCCCC;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #E6E6E6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── En-tête cycle avec voyant ── */
+.cycleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.voyantWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: help;
+}
+
+.voyant {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.voyantOk  { background: #55B187; box-shadow: 0 0 4px #55B18766; }
+.voyantErr { background: #C44C4C; box-shadow: 0 0 4px #C44C4C66; }
+
+.voyantLabel {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #CCCCCC;
+}
+
+/* ── Liste cycle ── */
+.cycleList {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cycleItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 6px;
+  background: #EFEFEF;
+  border-radius: 4px;
+  border-left: 3px solid #3EAABC;
+}
+
+.cycleIdx {
+  font-size: 9px;
+  font-weight: 700;
+  color: #3EAABC;
+  width: 12px;
+  flex-shrink: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cycleInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.cycleName {
+  font-size: 11px;
+  font-weight: 700;
+  color: #293771;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cycleAnt {
+  font-size: 9px;
+  color: #CCCCCC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.repInput {
+  width: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #293771;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  padding: 1px 3px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-shrink: 0;
+}
+.repInput:focus { outline: none; border-color: #3EAABC; }
+
+.removeBtn {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  color: #CCCCCC;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: color 0.15s, background 0.15s;
+  line-height: 1;
+}
+.removeBtn:hover { color: #C44C4C; background: #faeaea; }
+
+.empty {
+  font-size: 10px;
+  color: #CCCCCC;
+  font-style: italic;
+  text-align: center;
+  padding: 8px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── Ajouter ── */
+.addList {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.addBtn {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3EAABC;
+  background: none;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s, border-color 0.12s;
+}
+.addBtn:hover { background: #e3f5f8; border-color: #3EAABC; }
+
+/* ── Séparateur ── */
+.sep {
+  height: 1px;
+  background: #E6E6E6;
+  margin: 2px 0;
+  flex-shrink: 0;
+}
+
+/* ── Contrôle auto ── */
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #3F3F3F;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.check {
+  width: 13px;
+  height: 13px;
+  accent-color: #3EAABC;
+  flex-shrink: 0;
+}
+
+/* ── Commandes ── */
+.cmdRow {
+  display: flex;
+  gap: 6px;
+}
+
+.cmdBtn {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.cmdBtn:disabled     { opacity: 0.3; cursor: not-allowed; }
+.cmdBtn:not(:disabled):hover { opacity: 0.85; }
+.cmdStart { background: #55B187; color: #F7F7F7; }
+.cmdStop  { background: #C44C4C; color: #F7F7F7; }
+
+.statusBadge {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.statusOn  { background: #e4f5ed; color: #2a6b4c; }
+.statusOff { background: #EFEFEF; color: #CCCCCC; }
+
+/* ── Modal confirmation ── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(41, 55, 113, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+  padding: 20px 24px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(41, 55, 113, 0.18);
+}
+
+.modalTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #293771;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modalMsg {
+  font-size: 12px;
+  color: #3F3F3F;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modalActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.modalCancel {
+  padding: 7px 14px;
+  background: #EFEFEF;
+  color: #293771;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.modalCancel:hover { opacity: 0.8; }
+
+.modalConfirm {
+  padding: 7px 14px;
+  background: #C44C4C;
+  color: #F7F7F7;
+  border: none;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.modalConfirm:hover { opacity: 0.88; }

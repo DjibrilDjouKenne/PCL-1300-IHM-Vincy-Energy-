@@ -1,0 +1,104 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  padding: 12px 14px;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* Entête */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.headerChips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  font-size: 9px;
+  font-weight: 700;
+  color: #293771;
+  background: #EFEFEF;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  padding: 2px 7px;
+  white-space: nowrap;
+}
+
+.headerParams {
+  font-size: 9px;
+  color: #CCCCCC;
+  padding-left: 2px;
+}
+
+/* Graphes */
+.graphRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.svg {
+  display: block;
+  background: #F7F7F7;
+  flex-shrink: 0;
+}
+
+/* Navigation */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-shrink: 0;
+  padding-top: 6px;
+  border-top: 1px solid #E6E6E6;
+}
+
+.navBtn {
+  width: 28px;
+  height: 24px;
+  background: #EFEFEF;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  color: #3EAABC;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.15s;
+  line-height: 1;
+}
+.navBtn:hover { background: #e3f5f8; border-color: #3EAABC; }
+
+.navInfo {
+  font-size: 10px;
+  font-weight: 700;
+  color: #293771;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* graphRow prend tout l'espace vertical restant */
+.graphRow {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}

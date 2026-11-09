@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.label {
+  color: #3F3F3F;
+}
+
+.value {
+  font-weight: 700;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ok   { background: #e4f5ed; color: #2a6b4c; }
+.err  { background: #faeaea; color: #C44C4C; }
+.warn { background: #fef7e6; color: #8a6000; }

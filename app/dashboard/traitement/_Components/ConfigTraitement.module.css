@@ -1,0 +1,233 @@
+/* ============================================================
+   ConfigTraitement — charte DH
+   ============================================================ */
+
+.card {
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 2px 12px rgba(41, 55, 113, 0.10);
+}
+
+/* ── Titre ── */
+.cardTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #293771;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3EAABC;
+  margin-bottom: 2px;
+}
+
+/* ── Lignes de paramètres ── */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+}
+
+.rowLabel {
+  font-size: 11px;
+  color: #3F3F3F;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Date-heure affichée — style DataCell Normal */
+.datetimeVal {
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #121212;
+  background: #EFEFEF;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.autreBtn {
+  font-size: 10px;
+  font-weight: 700;
+  color: #3EAABC;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.autreBtn:hover { background: #e3f5f8; }
+
+.arrow {
+  font-size: 14px;
+  color: #CCCCCC;
+}
+
+/* Info cycle (nb mesures + durée) */
+.infoRow {
+  display: flex;
+  gap: 8px;
+  padding-left: 2px;
+}
+
+.infoChip {
+  font-size: 10px;
+  color: #3F3F3F;
+  background: #EFEFEF;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  padding: 2px 8px;
+}
+
+/* Sélecteur */
+.select {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #293771;
+  background: #EFEFEF;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  padding: 3px 6px;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.select:focus { outline: none; border-color: #3EAABC; }
+
+.unit {
+  font-size: 10px;
+  color: #CCCCCC;
+  width: 24px;
+}
+
+.cycleInfo {
+  font-size: 10px;
+  color: #3F3F3F;
+  background: #e3f5f8;
+  border-radius: 3px;
+  padding: 2px 7px;
+}
+
+/* Séparateur */
+.sep {
+  height: 1px;
+  background: #E6E6E6;
+  margin: 2px 0;
+}
+
+/* ── Actions ── */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 4px;
+  border-top: 1px solid #E6E6E6;
+  margin-top: 4px;
+}
+
+.btnOk {
+  padding: 7px 20px;
+  background: #293771;
+  color: #F7F7F7;
+  border: none;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btnOk:hover { opacity: 0.88; }
+
+.btnAnnuler {
+  padding: 7px 20px;
+  background: #EFEFEF;
+  color: #293771;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btnAnnuler:hover { opacity: 0.8; }
+
+/* ── Sélecteur datetime ── */
+.pickerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(41, 55, 113, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.pickerBox {
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(41, 55, 113, 0.18);
+  min-width: 280px;
+}
+
+.pickerTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #293771;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dtInput {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #293771;
+  background: #EFEFEF;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+.dtInput:focus { outline: none; border-color: #3EAABC; }
+
+.pickerActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pickerCancel {
+  padding: 6px 14px;
+  background: #EFEFEF;
+  color: #293771;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.card {
+  background: #F7F7F7;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #293771;
+  margin: 0;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
